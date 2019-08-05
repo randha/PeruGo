@@ -17,6 +17,19 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    /*flavorDimensions "default"
+    productFlavors {
+        user {
+            applicationId = "edu.pucp.perugo.user"
+            versionName = "1.0-user"
+        }
+        admin {
+            applicationIdSuffix = ".admin"
+            versionNameSuffix = "-admin"
+        }
+
+    }*/
+
 }
 
 dependencies {
