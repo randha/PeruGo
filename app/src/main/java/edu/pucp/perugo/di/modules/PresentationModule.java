@@ -13,6 +13,7 @@ import io.reactivex.Scheduler;
 import retrofit2.Retrofit;
 
 public class PresentationModule {
+    /*
     @PerActivity
     @Provides
     JsonPlaceHolderApi provideJsonPlaceHolderApi(Retrofit retrofit){
@@ -34,4 +35,5 @@ public class PresentationModule {
                                                          @Named("executor_thread") Scheduler executorThread){
         return new DetalleEventoInteractorImpl(jsonPlaceHolderApi,uiThread,executorThread);
     }
+    */
 }
