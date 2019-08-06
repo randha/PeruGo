@@ -7,9 +7,10 @@ public class Evento {
     private String fechaIni;
     private String fechaFin;
     private Ubicacion ubicacion;
-    private Persona registrador;
+    private int idRegistrador;
     private NaturalezaEvento naturaleza;
     private int contVisitas;
+    private EstadoEvento estadoEvento;
 
     public NaturalezaEvento getNaturaleza() {
         return naturaleza;
@@ -67,19 +68,19 @@ public class Evento {
         this.ubicacion = ubicacion;
     }
 
-    public Persona getRegistrador() {
-        return registrador;
-    }
-
-    public void setRegistrador(Persona registrador) {
-        this.registrador = registrador;
-    }
-
     public int getContVisitas() {
         return contVisitas;
     }
 
     public void setContVisitas(int contVisitas) {
         this.contVisitas = contVisitas;
+    }
+
+    public int getIdRegistrador() {
+        return idRegistrador;
+    }
+
+    public void setIdRegistrador(int idRegistrador) {
+        this.idRegistrador = idRegistrador;
     }
 }
