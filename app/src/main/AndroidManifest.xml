@@ -11,7 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".presentation.detalle_evento.view.DetalleEventoActivity"></activity>
+        <activity android:name=".RegistroUsuarioActivity"
+            android:label="Registro Usuario"
+            ></activity>
+        <activity android:name=".presentation.detalle_evento.view.DetalleEventoActivity" />
         <activity android:name=".presentation.evento.view.EventoActivity" />
         <activity
             android:name=".ui.login.LoginActivity"
