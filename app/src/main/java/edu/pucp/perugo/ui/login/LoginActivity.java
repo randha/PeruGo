@@ -5,6 +5,7 @@ import android.app.Activity;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -23,6 +24,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import edu.pucp.perugo.R;
+import edu.pucp.perugo.presentation.evento.view.EventoActivity;
 import edu.pucp.perugo.ui.login.LoginViewModel;
 import edu.pucp.perugo.ui.login.LoginViewModelFactory;
 
@@ -127,5 +129,20 @@ public class LoginActivity extends AppCompatActivity {
 
     private void showLoginFailed(@StringRes Integer errorString) {
         Toast.makeText(getApplicationContext(), errorString, Toast.LENGTH_SHORT).show();
+    }
+
+    public void validarIngreso(View view) {
+        //TODO : Agregar reglas de validación
+
+    }
+
+    public boolean verificarDatos(String user, String password) {
+        boolean esCorrecto = false;
+        if ((user.equals("user") && (password.equals("123456"))) ||
+            (user.equals("admin") && (password.equals("654321"))))
+        {
+            esCorrecto = true;
+        }
+        return esCorrecto;
     }
 }
