@@ -119,6 +119,8 @@ public class LoginActivity extends AppCompatActivity {
                 loadingProgressBar.setVisibility(View.VISIBLE);
                 loginViewModel.login(usernameEditText.getText().toString(),
                         passwordEditText.getText().toString());
+
+                abrirListaEventos(v);
             }
         });
     }
@@ -153,5 +155,10 @@ public class LoginActivity extends AppCompatActivity {
             esCorrecto = true;
         }
         return esCorrecto;
+    }
+
+    public void abrirListaEventos(View view) {
+        Intent intent = new Intent(this, EventoActivity.class);
+        startActivityForResult(intent, TEXT_REQUEST);
     }
 }

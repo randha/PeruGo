@@ -1,5 +1,6 @@
 package edu.pucp.perugo.data;
 
+
 import edu.pucp.perugo.data.model.LoggedInUser;
 
 /**
@@ -9,6 +10,7 @@ import edu.pucp.perugo.data.model.LoggedInUser;
 public class LoginRepository {
 
     private static volatile LoginRepository instance;
+    private static int TEXT_REQUEST = 1;
 
     private LoginDataSource dataSource;
 
