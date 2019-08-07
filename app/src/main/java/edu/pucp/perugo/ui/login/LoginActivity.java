@@ -5,6 +5,7 @@ import android.app.Activity;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -13,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
@@ -23,13 +25,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import edu.pucp.perugo.R;
+import edu.pucp.perugo.RegistroUsuarioActivity;
 import edu.pucp.perugo.ui.login.LoginViewModel;
 import edu.pucp.perugo.ui.login.LoginViewModelFactory;
 
 public class LoginActivity extends AppCompatActivity {
 
     private LoginViewModel loginViewModel;
-
+    public static final int TEXT_REQUEST = 1;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -127,5 +130,11 @@ public class LoginActivity extends AppCompatActivity {
 
     private void showLoginFailed(@StringRes Integer errorString) {
         Toast.makeText(getApplicationContext(), errorString, Toast.LENGTH_SHORT).show();
+    }
+    //abrirFRegistroUsuario
+
+    public void abrirFRegistroUsuario(View view) {
+        Intent intent = new Intent(this, RegistroUsuarioActivity.class);
+        startActivityForResult(intent, TEXT_REQUEST);
     }
 }
