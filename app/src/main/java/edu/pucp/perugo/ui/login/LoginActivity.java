@@ -33,6 +33,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private LoginViewModel loginViewModel;
     public static final int TEXT_REQUEST = 1;
+    public static final int ERRORMSJ = 1;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -120,7 +121,12 @@ public class LoginActivity extends AppCompatActivity {
                 loginViewModel.login(usernameEditText.getText().toString(),
                         passwordEditText.getText().toString());
 
-                abrirListaEventos(v);
+                if (!verificarDatos(usernameEditText.getText().toString(),
+                        passwordEditText.getText().toString()).equals("")) {
+                    abrirListaEventos(v);
+                } else {
+                    showLoginFailed(ERRORMSJ);
+                }
             }
         });
     }
@@ -147,14 +153,14 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
-    public boolean verificarDatos(String user, String password) {
-        boolean esCorrecto = false;
+    public String verificarDatos(String user, String password) {
+        String usuario = "";
         if ((user.equals("user") && (password.equals("123456"))) ||
             (user.equals("admin") && (password.equals("654321"))))
         {
-            esCorrecto = true;
+            usuario = user;
         }
-        return esCorrecto;
+        return usuario;
     }
 
     public void abrirListaEventos(View view) {

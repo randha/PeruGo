@@ -11,6 +11,7 @@ public class Evento {
     private NaturalezaEvento naturaleza;
     private int contVisitas;
     private EstadoEvento estadoEvento;
+    private int idImagen;
 
     public NaturalezaEvento getNaturaleza() {
         return naturaleza;
@@ -82,5 +83,21 @@ public class Evento {
 
     public void setIdRegistrador(int idRegistrador) {
         this.idRegistrador = idRegistrador;
+    }
+
+    public EstadoEvento getEstadoEvento() {
+        return estadoEvento;
+    }
+
+    public void setEstadoEvento(EstadoEvento estadoEvento) {
+        this.estadoEvento = estadoEvento;
+    }
+
+    public int getIdImagen() {
+        return idImagen;
+    }
+
+    public void setIdImagen(int idImagen) {
+        this.idImagen = idImagen;
     }
 }
