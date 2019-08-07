@@ -24,6 +24,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import edu.pucp.perugo.R;
+import edu.pucp.perugo.RegistroUsuarioActivity;
 import edu.pucp.perugo.presentation.evento.view.EventoActivity;
 import edu.pucp.perugo.ui.login.LoginViewModel;
 import edu.pucp.perugo.ui.login.LoginViewModelFactory;
@@ -31,6 +32,7 @@ import edu.pucp.perugo.ui.login.LoginViewModelFactory;
 public class LoginActivity extends AppCompatActivity {
 
     private LoginViewModel loginViewModel;
+    public static final int TEXT_REQUEST = 1;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -129,6 +131,13 @@ public class LoginActivity extends AppCompatActivity {
 
     private void showLoginFailed(@StringRes Integer errorString) {
         Toast.makeText(getApplicationContext(), errorString, Toast.LENGTH_SHORT).show();
+    }
+
+    //abrirFRegistroUsuario
+
+    public void abrirFRegistroUsuario(View view) {
+        Intent intent = new Intent(this, RegistroUsuarioActivity.class);
+        startActivityForResult(intent, TEXT_REQUEST);
     }
 
     public void validarIngreso(View view) {
