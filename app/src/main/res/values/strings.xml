@@ -11,5 +11,6 @@
     <string name="prompt_user">Usuario</string>
     <string name="tituloEventos">Lista de eventos</string>
     <string name="prompt_email">Email</string>
+    <string name="fecha_de_nacimiento">fecha_de_nacimiento</string>
 
 </resources>
