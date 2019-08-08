@@ -13,6 +13,13 @@ public class Evento {
     private EstadoEvento estadoEvento;
     private int idImagen;
 
+    public Evento(int idEvento, String titulo, String descripcion, int idImagen) {
+        this.idEvento = idEvento;
+        this.titulo = titulo;
+        this.descripcion = descripcion;
+        this.idImagen = idImagen;
+    }
+
     public NaturalezaEvento getNaturaleza() {
         return naturaleza;
     }
