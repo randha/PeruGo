@@ -7,6 +7,18 @@
     tools:context=".presentation.evento.view.EventoActivity"
     android:id="@+id/activity_evento">
 
+    <!--<TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/tituloEventos"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="50dp"
+        android:padding="10dp"/>-->
+
     <ListView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
