@@ -27,10 +27,10 @@ public class EventoActivity extends AppCompatActivity {
 
     private ArrayList<Evento> GetArrayEventos(){
         ArrayList<Evento> listEventos = new ArrayList<>();
-        listEventos.add(new Evento(1, "Evento 1", "Descripcion 1", 1));
-        listEventos.add(new Evento(2, "Evento 2", "Descripcion 2", 2));
-        listEventos.add(new Evento(3, "Evento 3", "Descripcion 3", 3));
-        listEventos.add(new Evento(4, "Evento 4", "Descripcion 4", 4));
+        listEventos.add(new Evento(1, "Evento 1", "Descripcion 1", R.drawable.img01));
+        listEventos.add(new Evento(2, "Evento 2", "Descripcion 2", R.drawable.img02));
+        listEventos.add(new Evento(3, "Evento 3", "Descripcion 3", R.drawable.img03));
+        listEventos.add(new Evento(4, "Evento 4", "Descripcion 4", R.drawable.img04));
 
         return listEventos;
     }
